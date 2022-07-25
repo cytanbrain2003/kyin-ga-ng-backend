@@ -27,12 +27,20 @@ public class MainController {
     @Autowired
     private DiningTableService diningTableService;
 
+    @GetMapping("/prepare")
+    public String prepare(){
+
+        hostelService.saveHostel(new Hostel("Ingin1",5));
+        diningTableService.saveDiningTable(new DiningTable(1,5));
+        seatService.saveSeat(new Seat(1));
+
+        return "success";
+    }
+
     @PostMapping("/register")
     public ResponseEntity<Yogi> register(@RequestBody YogiDto yogiDto){
 
-//        hostelService.saveHostel(new Hostel("Ingin1",5));
-//        diningTableService.saveDiningTable(new DiningTable(1,5));
-//        seatService.saveSeat(new Seat(1));
+
 
         Hostel hostel = hostelService.findHostelByName(yogiDto.getHostelName());
 
