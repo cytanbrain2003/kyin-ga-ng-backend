@@ -16,4 +16,8 @@ public class HostelService {
     public Hostel saveHostel(Hostel hostel){
         return hostelDao.save(hostel);
     }
+
+    public Hostel findHostelByName(String name){
+        return hostelDao.findByName(name);
+    }
 }

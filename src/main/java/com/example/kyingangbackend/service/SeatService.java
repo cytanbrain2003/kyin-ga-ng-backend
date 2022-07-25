@@ -16,4 +16,8 @@ public class SeatService {
     public Seat saveSeat(Seat seat){
         return seatDao.save(seat);
     }
+
+    public Seat findSeatBySeatNumber(Integer no){
+        return seatDao.findBySeatNumber(no);
+    }
 }

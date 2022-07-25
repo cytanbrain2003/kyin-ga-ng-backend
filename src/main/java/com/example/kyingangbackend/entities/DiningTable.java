@@ -17,7 +17,7 @@ public class DiningTable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String tableNumber;
+    private Integer tableNumber;
     private Integer max_number;
 
 //    @OneToMany(mappedBy = "diningTable")
@@ -31,7 +31,7 @@ public class DiningTable {
     public DiningTable() {
     }
 
-    public DiningTable(String tableNumber, Integer max_number) {
+    public DiningTable(Integer tableNumber, Integer max_number) {
         this.tableNumber = tableNumber;
         this.max_number = max_number;
     }

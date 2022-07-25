@@ -16,4 +16,8 @@ public class DiningTableService {
     public DiningTable saveDiningTable(DiningTable diningTable){
         return diningTableDao.save(diningTable);
     }
+
+    public DiningTable findDiningTableByTableNumber(Integer no){
+        return diningTableDao.findByTableNumber(no);
+    }
 }
